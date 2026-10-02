@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>개인 프로필</title>
+</head>
+<body>
+  <h1><%= profile.name %>의 프로필</h1>
+  <p><strong>학번:</strong> <%= profile.studentId %></p>
+  <p><strong>소개:</strong> <%= profile.bio %></p>
+
+  <h2>배운 기술</h2>
+  <ul>
+    <% profile.skills.forEach(skill => { %>
+      <li><%= skill %></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
